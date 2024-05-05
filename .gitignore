@@ -1,3 +1,4 @@
 pan*
 *.tmp
 *.trail
+*_output.txt
