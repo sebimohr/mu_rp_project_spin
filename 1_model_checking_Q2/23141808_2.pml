@@ -29,14 +29,34 @@ active proctype n ()
     od
 }
 
-// p1 should not hold
+/**
+P1 should not hold:
+- count increases until 31 when mode == 1.
+ */
 ltl p1 {[](count < 30)}
 
-// p2 should hold
+/**
+P2 should hold:
+- the only way count will be decreased to 0 is when mode is 2 or 3 and therefore greater than 1.
+ */
 ltl p2 {count > 0 -> ((count > 0 U (mode > 1)) && <> (mode > 1))}
 
-// p3 should hold
+/**
+P3 should hold:
+- count will be greater than 0 until mode is 2 or the program ends with mode = 3, which sets count to 0.
+ */
 ltl p3 {count > 0 -> <> (count == 0)}
 
-// p4 should hold
+/**
+P4 should hold:
+- when n gets executed mode is set to 3 and the program terminates.
+ */
 ltl p4 {<>(mode == 3)}
+
+/** Q2 - b
+Weak-Fairness assures that the program eventually reaches every action.
+
+When Weak-Fairness is no longer assumed, it means that mode could always stay in state 1.
+That would break p2, p3 and p4, as they all require mode to be changed to 2 or 3 at some point,
+because otherwise their respective assertions won't happen or become true.
+ */
