@@ -1,4 +1,4 @@
-spin -a 23141808_Q1.pml
+spin -a 23141808_1.pml
 ltl p1: <> ((b==1))
 ltl p2: [] ((x>=15))
 ltl p3: <> ((x==15))
@@ -9,7 +9,7 @@ ltl p7: [] ((! ((b==0))) || ([] (<> ((x==16)))))
   the model contains 7 never claims: p7, p6, p5, p4, p3, p2, p1
   only one claim is used in a verification run
   choose which one with ./pan -a -N name (defaults to -N p1)
-  or use e.g.: spin -search -ltl p1 23141808_Q1.pml
+  or use e.g.: spin -search -ltl p1 23141808_1.pml
 gcc -o pan pan.c
 ./pan -N p1
 pan: ltl formula p1
@@ -39,7 +39,7 @@ Stats on memory usage (in Megabytes):
 
 
 unreached in proctype P
-	23141808_Q1.pml:18, state 14, "-end-"
+	23141808_1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p1
 	_spin_nvr.tmp:6, state 6, "-end-"
@@ -49,7 +49,7 @@ pan: elapsed time 0 seconds
 ./pan -N p2
 pan: ltl formula p2
 pan:1: assertion violated  !( !((x>=15))) (at depth 0)
-pan: wrote 23141808_Q1.pml.trail
+pan: wrote 23141808_1.pml.trail
 
 (Spin Version 6.5.2 -- 6 December 2019)
 Warning: Search not completed
@@ -106,7 +106,7 @@ Stats on memory usage (in Megabytes):
 
 
 unreached in proctype P
-	23141808_Q1.pml:18, state 14, "-end-"
+	23141808_1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p3
 	_spin_nvr.tmp:22, state 6, "-end-"
@@ -141,7 +141,7 @@ Stats on memory usage (in Megabytes):
 
 
 unreached in proctype P
-	23141808_Q1.pml:18, state 14, "-end-"
+	23141808_1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p4
 	_spin_nvr.tmp:29, state 6, "-end-"
@@ -176,7 +176,7 @@ Stats on memory usage (in Megabytes):
 
 
 unreached in proctype P
-	23141808_Q1.pml:18, state 14, "-end-"
+	23141808_1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p5
 	_spin_nvr.tmp:40, state 13, "-end-"
@@ -211,7 +211,7 @@ Stats on memory usage (in Megabytes):
 
 
 unreached in proctype P
-	23141808_Q1.pml:18, state 14, "-end-"
+	23141808_1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p6
 	_spin_nvr.tmp:51, state 13, "-end-"
@@ -246,7 +246,7 @@ Stats on memory usage (in Megabytes):
 
 
 unreached in proctype P
-	23141808_Q1.pml:18, state 14, "-end-"
+	23141808_1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p7
 	_spin_nvr.tmp:68, state 22, "-end-"

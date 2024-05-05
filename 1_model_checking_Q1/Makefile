@@ -1,4 +1,4 @@
-FILENAME = 23141808_Q1.pml
+FILENAME = 23141808_1.pml
 LTL = p1
 
 all: spin pan run_all
@@ -24,3 +24,6 @@ one_ltl: spin pan
 
 trail: spin pan one_ltl
 	spin -t -p $(FILENAME).trail
+
+clean:
+	rm -f $(FILENAME).trail pan* _spin_nvr.tmp

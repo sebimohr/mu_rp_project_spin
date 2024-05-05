@@ -17,17 +17,24 @@ active proctype P ()
     od
 }
 
+// p1 should hold
 ltl p1 {<>(b == true)}
 
+// p2 should not hold
 ltl p2 {[](x >= 15)}
 
+// p3 should hold
 ltl p3 {<>(x == 15)}
 
+// p4 should hold
 ltl p4 {<>(x == 16)}
 
+// p5 should not hold
 ltl p5 {<>([](x >= 16))}
 
+// p6 should hold
 ltl p6 {[] (<>(x == 16))}
 
+// p7 should hold
 ltl p7 {[] (b == false -> ([] (<> (x == 16))))}
 
