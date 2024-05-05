@@ -17,7 +17,7 @@ active proctype P ()
     od
 }
 
-ltl p1 {[] (<>(b == true))}
+ltl p1 {<>(b == true)}
 
 ltl p2 {[](x >= 15)}
 

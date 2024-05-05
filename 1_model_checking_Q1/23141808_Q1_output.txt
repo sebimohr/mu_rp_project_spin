@@ -1,5 +1,5 @@
 spin -a 23141808_Q1.pml
-ltl p1: [] (<> ((b==1)))
+ltl p1: <> ((b==1))
 ltl p2: [] ((x>=15))
 ltl p3: <> ((x==15))
 ltl p4: <> ((x==16))
@@ -11,39 +11,42 @@ ltl p7: [] ((! ((b==0))) || ([] (<> ((x==16)))))
   choose which one with ./pan -a -N name (defaults to -N p1)
   or use e.g.: spin -search -ltl p1 23141808_Q1.pml
 gcc -o pan pan.c
-./pan -a -N p1
+./pan -N p1
 pan: ltl formula p1
-pan:1: acceptance cycle (at depth 90)
-pan: wrote 23141808_Q1.pml.trail
 
 (Spin Version 6.5.2 -- 6 December 2019)
-Warning: Search not completed
 	+ Partial Order Reduction
 
 Full statespace search for:
 	never claim         	+ (p1)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
-State-vector 36 byte, depth reached 185, errors: 1
-      115 states, stored (137 visited)
-       39 states, matched
-      176 transitions (= visited+matched)
+State-vector 36 byte, depth reached 185, errors: 0
+      115 states, stored
+       20 states, matched
+      135 transitions (= stored+matched)
         0 atomic steps
 hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
     0.007	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
 
 
+unreached in proctype P
+	23141808_Q1.pml:18, state 14, "-end-"
+	(1 of 14 states)
+unreached in claim p1
+	_spin_nvr.tmp:6, state 6, "-end-"
+	(1 of 6 states)
 
 pan: elapsed time 0 seconds
-./pan -a -N p2
+./pan -N p2
 pan: ltl formula p2
 pan:1: assertion violated  !( !((x>=15))) (at depth 0)
 pan: wrote 23141808_Q1.pml.trail
@@ -55,7 +58,7 @@ Warning: Search not completed
 Full statespace search for:
 	never claim         	+ (p2)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
 State-vector 36 byte, depth reached 0, errors: 1
@@ -67,7 +70,7 @@ hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
     0.000	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
@@ -75,7 +78,7 @@ Stats on memory usage (in Megabytes):
 
 
 pan: elapsed time 0 seconds
-./pan -a -N p3
+./pan -N p3
 pan: ltl formula p3
 
 (Spin Version 6.5.2 -- 6 December 2019)
@@ -84,19 +87,19 @@ pan: ltl formula p3
 Full statespace search for:
 	never claim         	+ (p3)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
 State-vector 36 byte, depth reached 90, errors: 0
-       96 states, stored (192 visited)
-      121 states, matched
-      313 transitions (= visited+matched)
+       96 states, stored
+       14 states, matched
+      110 transitions (= stored+matched)
         0 atomic steps
 hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
     0.006	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
@@ -106,135 +109,147 @@ unreached in proctype P
 	23141808_Q1.pml:18, state 14, "-end-"
 	(1 of 14 states)
 unreached in claim p3
-	_spin_nvr.tmp:26, state 6, "-end-"
+	_spin_nvr.tmp:22, state 6, "-end-"
 	(1 of 6 states)
 
 pan: elapsed time 0 seconds
-./pan -a -N p4
+./pan -N p4
 pan: ltl formula p4
-pan:1: acceptance cycle (at depth 6)
-pan: wrote 23141808_Q1.pml.trail
 
 (Spin Version 6.5.2 -- 6 December 2019)
-Warning: Search not completed
 	+ Partial Order Reduction
 
 Full statespace search for:
 	never claim         	+ (p4)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
-State-vector 36 byte, depth reached 77, errors: 1
-       39 states, stored
-        0 states, matched
-       39 transitions (= stored+matched)
+State-vector 36 byte, depth reached 96, errors: 0
+      105 states, stored
+       16 states, matched
+      121 transitions (= stored+matched)
         0 atomic steps
 hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
-    0.002	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.006	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
 
 
+unreached in proctype P
+	23141808_Q1.pml:18, state 14, "-end-"
+	(1 of 14 states)
+unreached in claim p4
+	_spin_nvr.tmp:29, state 6, "-end-"
+	(1 of 6 states)
 
 pan: elapsed time 0 seconds
-./pan -a -N p5
+./pan -N p5
 pan: ltl formula p5
-pan:1: acceptance cycle (at depth 6)
-pan: wrote 23141808_Q1.pml.trail
 
 (Spin Version 6.5.2 -- 6 December 2019)
-Warning: Search not completed
 	+ Partial Order Reduction
 
 Full statespace search for:
 	never claim         	+ (p5)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
-State-vector 36 byte, depth reached 77, errors: 1
-       39 states, stored (41 visited)
-        1 states, matched
-       42 transitions (= visited+matched)
+State-vector 36 byte, depth reached 193, errors: 0
+      238 states, stored
+      128 states, matched
+      366 transitions (= stored+matched)
         0 atomic steps
 hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
-    0.002	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.015	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
 
 
+unreached in proctype P
+	23141808_Q1.pml:18, state 14, "-end-"
+	(1 of 14 states)
+unreached in claim p5
+	_spin_nvr.tmp:40, state 13, "-end-"
+	(1 of 13 states)
 
 pan: elapsed time 0 seconds
-./pan -a -N p6
+./pan -N p6
 pan: ltl formula p6
-pan:1: acceptance cycle (at depth 6)
-pan: wrote 23141808_Q1.pml.trail
 
 (Spin Version 6.5.2 -- 6 December 2019)
-Warning: Search not completed
 	+ Partial Order Reduction
 
 Full statespace search for:
 	never claim         	+ (p6)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
-State-vector 36 byte, depth reached 77, errors: 1
-       39 states, stored
-        0 states, matched
-       39 transitions (= stored+matched)
+State-vector 36 byte, depth reached 185, errors: 0
+      327 states, stored
+      227 states, matched
+      554 transitions (= stored+matched)
         0 atomic steps
 hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
-    0.002	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.020	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
 
 
+unreached in proctype P
+	23141808_Q1.pml:18, state 14, "-end-"
+	(1 of 14 states)
+unreached in claim p6
+	_spin_nvr.tmp:51, state 13, "-end-"
+	(1 of 13 states)
 
 pan: elapsed time 0 seconds
-./pan -a -N p7
+./pan -N p7
 pan: ltl formula p7
-pan:1: acceptance cycle (at depth 6)
-pan: wrote 23141808_Q1.pml.trail
 
 (Spin Version 6.5.2 -- 6 December 2019)
-Warning: Search not completed
 	+ Partial Order Reduction
 
 Full statespace search for:
 	never claim         	+ (p7)
 	assertion violations	+ (if within scope of claim)
-	acceptance   cycles 	+ (fairness disabled)
+	acceptance   cycles 	- (not selected)
 	invalid end states	- (disabled by never claim)
 
-State-vector 36 byte, depth reached 77, errors: 1
-       39 states, stored
-        0 states, matched
-       39 transitions (= stored+matched)
+State-vector 36 byte, depth reached 185, errors: 0
+      494 states, stored
+      512 states, matched
+     1006 transitions (= stored+matched)
         0 atomic steps
 hash conflicts:         0 (resolved)
 
 Stats on memory usage (in Megabytes):
-    0.002	equivalent memory usage for states (stored*(State-vector + overhead))
-    0.283	actual memory usage for states
+    0.030	equivalent memory usage for states (stored*(State-vector + overhead))
+    0.284	actual memory usage for states
   128.000	memory used for hash table (-w24)
     0.534	memory used for DFS stack (-m10000)
   128.730	total actual memory usage
 
 
+unreached in proctype P
+	23141808_Q1.pml:18, state 14, "-end-"
+	(1 of 14 states)
+unreached in claim p7
+	_spin_nvr.tmp:68, state 22, "-end-"
+	(1 of 22 states)
 
 pan: elapsed time 0 seconds
