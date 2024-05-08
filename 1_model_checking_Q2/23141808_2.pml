@@ -1,8 +1,19 @@
 /*
 Sebastian Mohr - 23141808
 Question 2
+
+To run this code:
+	spin -a 23141808_2.pml
+	gcc -o pan pan.c
+	./pan -a -N p1
+	./pan -a -N p2
+	./pan -a -N p3
+	./pan -a -N p4
+*/
 */
 
+// ------------------------------------------------------------------------------------------
+// GIVEN CODE
 byte mode = 1;
 byte count = 0;
 
@@ -28,6 +39,7 @@ active proctype n ()
         :: mode = 3
     od
 }
+// ------------------------------------------------------------------------------------------
 
 /**
 P1 should not hold:

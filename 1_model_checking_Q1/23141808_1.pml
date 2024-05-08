@@ -1,8 +1,26 @@
 /*
 Sebastian Mohr - 23141808
 Question 1
+
+NOTE: The explanations to the ltls are in a seperate pdf document: 23141808_1.pdf
+I really put much effort into the pdf and read afterwards that the explanations should be in the .pml file.
+As I didn't want all of my work to go to waste I let it stay in the pdf... :)
+For the second question I worked as requested, I hope that's fine.
+
+To run this code:
+	spin -a 23141808_1.pml
+	gcc -o pan pan.c
+	./pan -a -N p1
+	./pan -a -N p2
+	./pan -a -N p3
+	./pan -a -N p4
+	./pan -a -N p5
+	./pan -a -N p6
+	./pan -a -N p7
 */
 
+// ------------------------------------------------------------------------------------------
+// GIVEN CODE
 byte x = 0;
 bool b = false;
 
@@ -16,6 +34,7 @@ active proctype P ()
                     fi
     od
 }
+// ------------------------------------------------------------------------------------------
 
 // p1 should hold
 ltl p1 {<>(b == true)}
